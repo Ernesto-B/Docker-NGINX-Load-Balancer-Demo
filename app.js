@@ -6,12 +6,12 @@ const PORT = process.env.PORT || 3000;
 const serverName = process.env.SERVER_NAME || "Unknown Server";
 
 app.get("/", (req, res) => {
-    console.log(req.headers);
+    console.log(`REQUEST HEADERS: \n${JSON.stringify(req.headers)}`);
     res.send(`HOME PAGE, from ${serverName}, running on port ${PORT}`);
 });
 
 app.get("/info", (req, res) => {
-    console.log(req.headers);
+    console.log(`REQUEST HEADERS: \n${JSON.stringify(req.headers)}`);
     res.send(`INFORMATION page, from ${serverName}, running on port ${PORT}`);
 });
 
